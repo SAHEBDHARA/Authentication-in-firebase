@@ -16,12 +16,12 @@ const MainNavigation = () => {
       </Link>
       <nav>
         <ul>
-          <li>
+          {!authCtx.isLoggedIn && <li>
             <Link to='/auth'>Login</Link>
-          </li>
-          <li>
+          </li>}
+          { authCtx.isLoggedIn && <li>
             <Link to='/profile'>Profile</Link>
-          </li>
+          </li>}
           <li>
             <button onClick={logoutHandler}>Logout</button>
           </li>
