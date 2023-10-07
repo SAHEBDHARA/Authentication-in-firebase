@@ -16,7 +16,7 @@ export const AuthContextProvider = (props) => {
   
 
   // When the user logs in
-const login = (token) => {
+const loginHandler = (token) => {
   const loginTime = new Date().getTime();
   localStorage.setItem('token', token);
   localStorage.setItem('loginTime', loginTime);
